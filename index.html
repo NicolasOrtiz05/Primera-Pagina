@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Pagina 2.0 </title>
+	</head>
+
+	<body>
+		<h1>1. Botones con acciones y mensajes</h1>
+		<button> Un boton que no hace nada</button>
+
+		<br><br>
+
+		<button onclick="accion_1()" id="Bt1"> Botón 1</button><br> <!-- onClick la accion de darle clik, id como lo idenficiadomos !-->
+
+		<button onclick="accion_2()" id="Bt2"> Botón 2</button><br><br>
+
+		<button onclick="accion_3()" id="Bt1"> Botón 3</button><br><br><br>
+
+		<h1>2. Despliegue de datos:</h1>
+
+		<p>Hola, acontinuación solicitaremos algunos datos personales, esperamos que nos pueda colaborar con su información. </p><br>
+
+
+		Primer nombre: <input type="text" name="Recibir texto 1" id="Tx-1"> <!-- type que tipo de dato recibo !-->
+
+		Segundo nombre: <input type="text" name="Recibir texto 2" id="Tx-2"><br><br>
+
+		<p>Primer apellido: <input type="text" name="Recibir texto 3" id="Tx-3">
+
+		Segundo apellido: <input type="text" name="Recibir texto 4" id="Tx-4"></p>
+
+		<button onclick="accion_4()" id="Bt4"> CONCATENAR</button>
+		<br><br>
+
+		Nombre completo: &nbsp;<output id= "Out1"></output>
+
+		<style type="text/css">
+			/* Comentario en css */
+
+			body
+			{
+				background-image: url(img2.jpg); /*Poner una imagen de fondo*/
+				background-repeat:space; /*De que forma quiero el fondo*/
+				color: rgb(82, 26, 133);
+
+			}
+
+			h1{color: rgba(33, 75, 68,1);}
+
+			h2{color: rgb(0, 0, 0);}
+
+			#Out1{color: rgb(28, 50, 46);}
+		</style>
+
+		<script type="text/javascript">
+			// Esto es un comentario en JavaScript
+
+			function accion_1()
+			{
+				alert("Botón 1 Alerta!")
+			}
+
+			function accion_2()
+			{
+				confirm("Confirmacion del Botón 2")
+			}
+
+			function accion_3()
+			{
+				alert("Alerta del Botón 3")
+				confirm("Confirmación del Boton 3")
+			}
+
+			function accion_4()
+			{
+				var nombreCompleto= document.getElementById("Tx-1").value+" "+
+									document.getElementById("Tx-2").value+" "+
+									document.getElementById("Tx-3").value+" "+
+									document.getElementById("Tx-4").value
+				alert(nombreCompleto)
+
+				document.getElementById("Out1").innerHTML=nombreCompleto
+			}
+		</script>
+		
+	</body>
+
+	</html>
